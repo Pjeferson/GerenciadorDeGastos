@@ -1,6 +1,6 @@
 package com.poo.projeto.model;
 
-public class Gasto {
+public abstract class Gasto {
 	private String data;
 	private String preco;
 	private String descricao;
