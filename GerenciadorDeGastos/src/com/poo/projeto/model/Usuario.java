@@ -11,6 +11,10 @@ public class Usuario {
 		gastos = new ArrayList<>();
 	}
 	
+	public Usuario (ArrayList<Gasto> gastos) {
+		this.gastos = gastos;
+	}
+	
 	public void addGasto(Gasto gasto) {
 		gastos.add(gasto);
 	}

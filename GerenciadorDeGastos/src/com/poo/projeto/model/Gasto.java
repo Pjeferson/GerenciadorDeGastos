@@ -5,6 +5,9 @@ public abstract class Gasto {
 	private String preco;
 	private String descricao;
 	
+	public Gasto() {
+		
+	}
 	public Gasto(String data, String preco, String descricao) {
 		this.data = data;
 		this.preco = preco;
