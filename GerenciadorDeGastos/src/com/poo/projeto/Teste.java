@@ -23,9 +23,9 @@ public class Teste {
 			e.printStackTrace();
 		}
 		gasto.setData(data);
-		gasto.setDescricao("Testanndo");
+		gasto.setDescricao("Testando");
 		gasto.setPreco(1.20);
-		gasto.setId(10);
+		//gasto.setId(10);
 		/*
 		 * try { gastodao.excluirGasto(gasto); } catch (SQLException e1) {
 		 * e1.printStackTrace(); }
