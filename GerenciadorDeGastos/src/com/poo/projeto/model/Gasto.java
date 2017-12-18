@@ -1,29 +1,38 @@
 package com.poo.projeto.model;
 
-public abstract class Gasto {
-	private String data;
-	private String preco;
+import java.util.Date;
+
+public class Gasto {
+	private int id;
+	private Date data;
+	private double preco;
 	private String descricao;
 	
 	public Gasto() {
 		
 	}
-	public Gasto(String data, String preco, String descricao) {
+	public Gasto(int id, Date data, double preco, String descricao) {
+		this.id = id;
 		this.data = data;
 		this.preco = preco;
 		this.descricao = descricao;
 	}
-	
-	public String getData() {
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Date getData() {
 		return data;
 	}
-	public void setData(String data) {
+	public void setData(Date data) {
 		this.data = data;
 	}
-	public String getPreco() {
+	public double getPreco() {
 		return preco;
 	}
-	public void setPreco(String preco) {
+	public void setPreco(double preco) {
 		this.preco = preco;
 	}
 	public String getDescricao() {

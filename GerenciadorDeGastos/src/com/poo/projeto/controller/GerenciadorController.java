@@ -1,5 +1,8 @@
 package com.poo.projeto.controller;
 
-public class GastoController {
-
+public class GerenciadorController {
+	
+	public GerenciadorController() {
+		
+	}
 }
