@@ -88,6 +88,38 @@ public class GastoDAO {
 		stat.close();
 		return gastos;
 	}
+	public List<Gasto> listarGastos(Date data1, Date data2) throws SQLException {
+		List<Gasto> gastos = new ArrayList<Gasto>();
+		SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		
+		String sql = "select * from gastos where ? <= data and data <= ? order by data;";
+		PreparedStatement stmt = con.prepareStatement(sql);
+		stmt.setString(1, formato.format(data1));
+		stmt.setString(2, formato.format(data2));
+		ResultSet rs = stmt.executeQuery();
+		while (rs.next()) {
+			int id = rs.getInt("id");
+
+			String dataIn = rs.getString("data");
+			Date data = new Date();
+			
+			try {
+				data = formato.parse(dataIn);
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+
+			int precoIn = rs.getInt("preco");
+			double preco = (double) precoIn / 100;
+
+			String descricao = rs.getString("descricao");
+			Gasto gasto = new Gasto(id, data, preco, descricao);
+			gastos.add(gasto);
+		}
+		rs.close();
+		stmt.close();
+		return gastos;
+	}
 
 	public void fecharDAO() {
 		try {

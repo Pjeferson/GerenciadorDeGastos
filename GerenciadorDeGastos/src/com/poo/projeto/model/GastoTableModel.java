@@ -10,9 +10,23 @@ import javax.swing.table.AbstractTableModel;
 
 public class GastoTableModel extends AbstractTableModel {
 
-	private List<Gasto> dados = new ArrayList();
+	private List<Gasto> dados;
 	private String[] colunas = { "Valor", "Data", "Descrição" };
 
+	public GastoTableModel() {
+		super();
+		dados = new ArrayList<>();
+	}
+	
+	public void changeGastoTableModel(List<Gasto> gastos) {
+		dados = gastos;
+		this.fireTableDataChanged();
+	}
+	
+	public int getIdAt(int id) {
+		return dados.get(id).getId();
+	}
+	
 	@Override
 	public String getColumnName(int coluna) {
 		return colunas[coluna];
@@ -35,7 +49,8 @@ public class GastoTableModel extends AbstractTableModel {
 			return dados.get(linha).getPreco();
 
 		case 1:
-			return dados.get(linha).getData();
+			SimpleDateFormat fmt = new SimpleDateFormat("dd/MM/yyyy");
+			return fmt.format(dados.get(linha).getData());
 
 		case 2:
 			return dados.get(linha).getDescricao();
