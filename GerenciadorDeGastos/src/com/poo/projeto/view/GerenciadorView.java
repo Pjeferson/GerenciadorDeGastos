@@ -76,7 +76,7 @@ public class GerenciadorView extends JFrame {
 	 * Create the frame.
 	 */
 	public GerenciadorView() {
-
+		super("Gerenciador de Gastos");
 		try {
 			controller = new GerenciadorController();
 		} catch (SQLException e) {
