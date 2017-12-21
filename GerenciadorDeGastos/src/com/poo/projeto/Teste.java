@@ -8,7 +8,6 @@ import java.util.List;
 
 import com.poo.projeto.model.Gasto;
 import com.poo.projeto.model.dao.GastoDAO;
-import com.sun.javafx.binding.StringFormatter;
 
 public class Teste {
 	public static void main(String[] args) {
