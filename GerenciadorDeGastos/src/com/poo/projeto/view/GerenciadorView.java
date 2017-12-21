@@ -112,12 +112,12 @@ public class GerenciadorView extends JFrame {
 
 		lblValorParcial = new JLabel("000.00");
 		lblValorParcial.setFont(new Font("Arial", Font.PLAIN, 18));
-		lblValorParcial.setBounds(533, 251, 64, 29);
+		lblValorParcial.setBounds(522, 251, 75, 29);
 		contentPane.add(lblValorParcial);
 
 		JLabel lblDescParcial = new JLabel("Valor Parcial:");
 		lblDescParcial.setFont(new Font("Arial", Font.PLAIN, 18));
-		lblDescParcial.setBounds(417, 251, 106, 29);
+		lblDescParcial.setBounds(412, 251, 106, 29);
 		contentPane.add(lblDescParcial);
 
 		dateChooser2 = new JDateChooser();
