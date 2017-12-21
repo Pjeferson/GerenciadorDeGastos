@@ -81,7 +81,6 @@ public class GastoTableModel extends AbstractTableModel {
 			try {
 				data = fmt.parse((String) valor);
 			} catch (ParseException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			dados.get(linha).setData(data);
