@@ -92,7 +92,7 @@ public class GerenciadorView extends JFrame {
 		contentPane.setLayout(null);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(297, 10, 300, 230);
+		scrollPane.setBounds(297, 38, 300, 230);
 
 		table = new JTable();
 		tableModel = new GastoTableModel();
@@ -112,30 +112,30 @@ public class GerenciadorView extends JFrame {
 
 		lblValorParcial = new JLabel("000.00");
 		lblValorParcial.setFont(new Font("Arial", Font.PLAIN, 18));
-		lblValorParcial.setBounds(522, 251, 75, 29);
+		lblValorParcial.setBounds(522, 279, 75, 29);
 		contentPane.add(lblValorParcial);
 
 		JLabel lblDescParcial = new JLabel("Valor Parcial:");
 		lblDescParcial.setFont(new Font("Arial", Font.PLAIN, 18));
-		lblDescParcial.setBounds(412, 251, 106, 29);
+		lblDescParcial.setBounds(412, 279, 106, 29);
 		contentPane.add(lblDescParcial);
 
 		dateChooser2 = new JDateChooser();
-		dateChooser2.setBounds(385, 373, 87, 20);
+		dateChooser2.setBounds(385, 390, 87, 20);
 		contentPane.add(dateChooser2);
 
 		JLabel lblDataFinal = new JLabel("Data Final:");
 		lblDataFinal.setFont(new Font("Arial", Font.PLAIN, 17));
-		lblDataFinal.setBounds(297, 374, 87, 19);
+		lblDataFinal.setBounds(297, 391, 87, 19);
 		contentPane.add(lblDataFinal);
 
 		JLabel lblDataInicial = new JLabel("Data Inicial:");
 		lblDataInicial.setFont(new Font("Arial", Font.PLAIN, 17));
-		lblDataInicial.setBounds(297, 343, 87, 19);
+		lblDataInicial.setBounds(297, 360, 87, 19);
 		contentPane.add(lblDataInicial);
 
 		dateChooser1 = new JDateChooser();
-		dateChooser1.setBounds(385, 342, 87, 20);
+		dateChooser1.setBounds(385, 359, 87, 20);
 		contentPane.add(dateChooser1);
 
 		JButton btnFiltrar = new JButton("Filtrar");
@@ -154,12 +154,12 @@ public class GerenciadorView extends JFrame {
 
 			}
 		});
-		btnFiltrar.setBounds(495, 343, 89, 23);
+		btnFiltrar.setBounds(495, 360, 89, 23);
 		contentPane.add(btnFiltrar);
 
 		JLabel lblFiltrarPorDatas = new JLabel("Filtrar Por Datas");
 		lblFiltrarPorDatas.setFont(new Font("Arial", Font.PLAIN, 18));
-		lblFiltrarPorDatas.setBounds(297, 313, 175, 29);
+		lblFiltrarPorDatas.setBounds(297, 330, 175, 29);
 		contentPane.add(lblFiltrarPorDatas);
 
 		JButton btnAdicionarGasto = new JButton("Adicionar");
@@ -179,11 +179,11 @@ public class GerenciadorView extends JFrame {
 				zerarCampos();
 			}
 		});
-		btnAdicionarGasto.setBounds(94, 217, 89, 23);
+		btnAdicionarGasto.setBounds(94, 245, 89, 23);
 		contentPane.add(btnAdicionarGasto);
 
 		txtDescricao = new JTextArea();
-		txtDescricao.setBounds(35, 85, 199, 120);
+		txtDescricao.setBounds(35, 113, 199, 120);
 		contentPane.add(txtDescricao);
 
 		JLabel lblPreco = new JLabel("Pre\u00E7o:");
@@ -223,7 +223,7 @@ public class GerenciadorView extends JFrame {
 				}
 			}
 		});
-		btnExcluir.setBounds(320, 251, 64, 23);
+		btnExcluir.setBounds(320, 279, 64, 23);
 		contentPane.add(btnExcluir);
 
 		JButton btnZerarFiltro = new JButton("Zerar Filtro");
@@ -240,8 +240,18 @@ public class GerenciadorView extends JFrame {
 				zerarFiltros();
 			}
 		});
-		btnZerarFiltro.setBounds(495, 370, 89, 23);
+		btnZerarFiltro.setBounds(495, 387, 89, 23);
 		contentPane.add(btnZerarFiltro);
+		
+		JLabel lblGastos = new JLabel("Gastos:");
+		lblGastos.setFont(new Font("Arial", Font.PLAIN, 17));
+		lblGastos.setBounds(297, 17, 55, 19);
+		contentPane.add(lblGastos);
+		
+		JLabel lblDesc = new JLabel("Descri\u00E7\u00E3o:");
+		lblDesc.setFont(new Font("Arial", Font.PLAIN, 17));
+		lblDesc.setBounds(35, 91, 80, 19);
+		contentPane.add(lblDesc);
 
 		atualizaValorParcial(controller.getValorTotal());
 	}
